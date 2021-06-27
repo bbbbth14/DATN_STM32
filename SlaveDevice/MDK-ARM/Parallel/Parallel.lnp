@@ -1,0 +1,28 @@
+--cpu Cortex-M3
+"parallel\system_stm32f1xx.o"
+"parallel\startup_stm32f103xb.o"
+"parallel\stm32f1xx_hal_msp.o"
+"parallel\main.o"
+"parallel\stm32f1xx_it.o"
+"parallel\bme280.o"
+"parallel\sds011.o"
+"parallel\stm32f1xx_hal_rcc.o"
+"parallel\stm32f1xx_hal_flash.o"
+"parallel\stm32f1xx_hal_tim_ex.o"
+"parallel\stm32f1xx_hal_i2c.o"
+"parallel\stm32f1xx_hal_cortex.o"
+"parallel\stm32f1xx_hal_pwr.o"
+"parallel\stm32f1xx_hal_tim.o"
+"parallel\stm32f1xx_hal_spi.o"
+"parallel\stm32f1xx_hal_dma.o"
+"parallel\stm32f1xx_hal_spi_ex.o"
+"parallel\stm32f1xx_hal.o"
+"parallel\stm32f1xx_hal_uart.o"
+"parallel\stm32f1xx_hal_gpio.o"
+"parallel\stm32f1xx_hal_flash_ex.o"
+"parallel\stm32f1xx_hal_rcc_ex.o"
+--library_type=microlib --strict --scatter "Parallel\Parallel.sct"
+
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Parallel.map" -o Parallel\Parallel.axf
